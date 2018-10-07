@@ -1,0 +1,24 @@
+version: '3.2'
+services:
+  samba:
+    build: .
+    privileged: true
+    environment:
+      SAMBA_DC_REALM: workgroup.local
+      SAMBA_DC_DOMAIN: workgroup
+      SAMBA_DC_ADMIN_PASSWD: P@ssw0rd
+      SAMBA_DC_DNS_BACKEND: SAMBA_INTERNAL
+    ports:
+      - 53:53
+      - 53:53/udp
+      - 88:88
+      - 88:88/udp
+      - 135:135
+      - 139:139
+      - 389:389
+      - 389:389/udp
+      - 445:445
+      - 464:464
+      - 464:464/udp
+      - 636:636
+      - 3268-3269:3268-3269
