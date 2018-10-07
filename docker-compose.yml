@@ -1,7 +1,7 @@
 version: '3.2'
 services:
   samba:
-    build: .
+    image: imunew/samba4-ad-dc
     privileged: true
     environment:
       SAMBA_DC_REALM: workgroup.local
