@@ -8,7 +8,7 @@ if [ ! -f /etc/samba/smb.conf ]; then
         --realm="${SAMBA_DC_REALM}" \
         --dns-backend="${SAMBA_DC_DNS_BACKEND}" \
         --use-rfc2307 \
-        --function-level=2008_R2
+        --function-level=2008_R2 \
         --option="allow dns updates = disabled"
 fi
 
